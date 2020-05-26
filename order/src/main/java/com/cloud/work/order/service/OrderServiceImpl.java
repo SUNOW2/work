@@ -30,7 +30,7 @@ public class OrderServiceImpl {
 
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void insert() throws Exception {
-        OrderEntity entity = new OrderEntity().setId(1L).setName("快餐");
+        OrderEntity entity = new OrderEntity();
         orderMapper.insert(entity);
         R result = feign.insert();
         if (result.get("code").equals(SC_INTERNAL_SERVER_ERROR)) {

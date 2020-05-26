@@ -23,7 +23,7 @@ public class InventoryServiceImpl {
 
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void insert() throws Exception {
-        InventoryEntity entity = new InventoryEntity().setId(1L).setCount(100L);
+        InventoryEntity entity = new InventoryEntity();
         mapper.insert(entity);
         insert2();
         throw new Exception();

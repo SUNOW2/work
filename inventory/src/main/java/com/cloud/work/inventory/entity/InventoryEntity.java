@@ -21,7 +21,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class InventoryEntity {
 
-    private Long id;
+    private Long id = 1L;
 
-    private Long count;
+    private Long count = 100L;
 }

@@ -23,10 +23,10 @@ public class OrderEntity {
     /**
      * 编号
      */
-    private Long id;
+    private Long id = 1L;
 
     /**
      * 商品名称
      */
-    private String name;
+    private String name = "快餐";
 }
