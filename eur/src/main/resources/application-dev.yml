@@ -1,0 +1,17 @@
+profiles: dev
+server:
+  port: 8081
+
+#spring:
+#  freemarker:
+#    prefer-file-system-access: false
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+  server:
+    enable-self-preservation: false

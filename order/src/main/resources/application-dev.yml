@@ -1,0 +1,44 @@
+profiles: dev
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: order
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/platform_test?useUnicode=true&characterEncoding=utf8&useSSL=true&useLegacyDatetimeCode=false&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 12345678
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8081/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+ribbon:
+  eureka:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 5000
