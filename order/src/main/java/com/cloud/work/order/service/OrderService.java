@@ -25,7 +25,7 @@ public class OrderService {
     private OrderServiceImpl serviceImpl;
 
     @HystrixCommand(fallbackMethod = "insertFallback", commandProperties = {
-            @HystrixProperty(name = EXECUTION_ISOLATION_THREAD_TIMEOUT_IN_MILLISECONDS, value = "3000")
+            @HystrixProperty(name = EXECUTION_ISOLATION_THREAD_TIMEOUT_IN_MILLISECONDS, value = "8000")
     })
     public R insert() throws Exception {
         log.info("新增订单");
