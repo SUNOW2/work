@@ -30,7 +30,7 @@ public class InventoryServiceImpl {
     }
 
     /**
-     * 测试@transactional的传播属性
+     * 测试@Transactional的传播属性
      */
     @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRES_NEW)
     public void insert2() {

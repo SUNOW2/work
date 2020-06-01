@@ -1,0 +1,21 @@
+profiles: dev
+
+server:
+  port: 8084
+
+spring:
+  application:
+    name: security
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8081/eureka/    # 指定注册中心的地址
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+security:
+  user: admin
+  password: inventory

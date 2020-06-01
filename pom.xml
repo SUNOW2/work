@@ -5,12 +5,14 @@
     <groupId>com.cloud</groupId>
     <artifactId>work</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>work</name>
     <modules>
         <module>eur</module>
         <module>order</module>
         <module>inventory</module>
         <module>core</module>
+        <module>security</module>
     </modules>
     <description>spring cloud系统间调用事务回滚</description>
 

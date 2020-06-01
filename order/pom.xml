@@ -6,7 +6,6 @@
         <groupId>com.cloud</groupId>
         <artifactId>work</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.cloud.work</groupId>
     <artifactId>order</artifactId>
