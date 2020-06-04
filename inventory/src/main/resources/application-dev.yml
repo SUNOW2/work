@@ -31,6 +31,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
 
+
 ribbon:
   eureka:
     enabled: true
@@ -49,3 +50,6 @@ hystrix:
           strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 5000
+feign:
+  okhttp:
+    enabled: true

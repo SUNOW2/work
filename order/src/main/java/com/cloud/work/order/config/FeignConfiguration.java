@@ -1,5 +1,6 @@
 package com.cloud.work.order.config;
 
+import feign.Logger;
 import feign.auth.BasicAuthRequestInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +23,15 @@ public class FeignConfiguration {
 
     @Value("${security.password}")
     private String password;
+
+    /**
+     * 开启Feign的日志
+     * @return
+     */
+    @Bean
+    public Logger.Level getFeignLoggerLevel() {
+        return Logger.Level.FULL;
+    }
 
     /**
      * 处理spring security权限配置

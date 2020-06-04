@@ -47,3 +47,18 @@ hystrix:
           strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 5000
+feign:
+  okhttp:
+    enabled: true
+  compression:
+    request:
+      enabled: true # 开始数据压缩
+      mime-types:   # 可以被压缩的类型
+        - text/xml
+        - application/xml
+        - application/json
+      min-request-size: 2048 # 超过2048个字节进行压缩
+
+logging:
+  level:
+    com.cloud.work.order: DEBUG
