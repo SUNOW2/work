@@ -21,8 +21,24 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * 基于@Transactional和Hystrix实现的事务一致性
+     *
+     * @return
+     * @throws Exception
+     */
     @GetMapping("insert")
     public R insert() throws Exception {
         return orderService.insert();
+    }
+
+    /**
+     * 基于seata实现的事务一致
+     *
+     * @return
+     */
+    @GetMapping("insertBySeaTa")
+    public R insertBySeaTa() {
+        return orderService.insertBySeaTa();
     }
 }

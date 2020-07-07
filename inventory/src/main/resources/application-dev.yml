@@ -16,6 +16,10 @@ spring:
       password: inventory
       roles:
         - USER
+
+seata:
+  tx-service-group: my_test_tx_group
+
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml

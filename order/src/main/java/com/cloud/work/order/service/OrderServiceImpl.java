@@ -4,6 +4,7 @@ import com.cloud.work.core.R;
 import com.cloud.work.order.common.feign.InventoryFeign;
 import com.cloud.work.order.entity.OrderEntity;
 import com.cloud.work.order.mapper.OrderMapper;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -36,5 +37,10 @@ public class OrderServiceImpl {
         if (result.get("code").equals(SC_INTERNAL_SERVER_ERROR)) {
             throw new Exception();
         }
+    }
+
+    @GlobalTransactional
+    public void insertBySeaTa() {
+
     }
 }

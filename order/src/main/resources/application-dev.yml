@@ -12,6 +12,9 @@ spring:
     username: root
     password: 12345678
 
+seata:
+  tx-service-group: my_test_tx_group
+
 security:
   user: admin
   password: inventory

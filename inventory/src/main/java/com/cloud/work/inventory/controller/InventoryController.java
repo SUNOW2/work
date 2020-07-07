@@ -26,4 +26,9 @@ public class InventoryController {
     public R insert() throws Exception {
         return service.insert();
     }
+
+    @GetMapping("insertBySeaTa")
+    public R insertBySeaTa() {
+        return service.insertBySeaTa();
+    }
 }

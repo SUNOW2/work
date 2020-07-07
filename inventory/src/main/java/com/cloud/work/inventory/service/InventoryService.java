@@ -46,4 +46,10 @@ public class InventoryService {
         log.info("新增库存失败");
         return R.error();
     }
+
+    public R insertBySeaTa() {
+        log.info("新增库存");
+        serviceImpl.insertBySeaTa();
+        return R.ok();
+    }
 }

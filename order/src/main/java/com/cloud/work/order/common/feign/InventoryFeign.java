@@ -20,4 +20,7 @@ public interface InventoryFeign {
 
     @GetMapping("/inventory/insert")
     R insert();
+
+    @GetMapping("/inventory/insertBySeaTa")
+    R insertBySeaTa();
 }

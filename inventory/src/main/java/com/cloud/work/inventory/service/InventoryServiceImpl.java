@@ -37,4 +37,15 @@ public class InventoryServiceImpl {
         InventoryEntity entity = new InventoryEntity().setId(2L).setCount(100L);
         mapper.insert(entity);
     }
+
+    @Transactional
+    public void insertBySeaTa() {
+        InventoryEntity entity = new InventoryEntity().setId(2L).setCount(100L);
+        mapper.insert(entity);
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
